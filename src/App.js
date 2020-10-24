@@ -60,7 +60,6 @@ function App() {
 
   useEffect(() => {
     getMatches()
-    console.log(process.env.TOKEN)
   // eslint-disable-next-line react-hooks/exhaustive-deps
   },[])
 
