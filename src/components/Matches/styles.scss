@@ -1,0 +1,15 @@
+.matches-container {
+  padding: 5px 0;
+  border-radius: 5px;
+  border: 1px solid rgba(75, 75, 75, 0.4);
+  background: #343a40;
+
+  flex: auto;
+  height: 250px;
+  min-width: 150px;
+  margin: 0 8px 8px 0;
+
+  h1 {
+    font-size: 20px;
+  }
+}
