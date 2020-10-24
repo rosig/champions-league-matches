@@ -49,7 +49,7 @@ function App() {
   async function getMatches() {
     try {
       const response = await axios.get('https://api.football-data.org/v2/competitions/CL/matches', {
-        headers: { 'X-Auth-Token': '92dec311c14d4cce8f6d6220d328f826' }
+        headers: { 'X-Auth-Token': process.env.REACT_APP_TOKEN }
       })
       setMatchesByDate(formatData(response.data.matches))
       setLoading(false)
@@ -60,6 +60,7 @@ function App() {
 
   useEffect(() => {
     getMatches()
+    console.log(process.env.TOKEN)
   // eslint-disable-next-line react-hooks/exhaustive-deps
   },[])
 
