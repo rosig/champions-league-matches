@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Matches from '../Matches';
 import { Card } from 'react-bootstrap';
-import { parseISO, getMonth ,getDay } from 'date-fns';
+import { parseISO, getMonth , getDate } from 'date-fns';
 import { FaRegSadCry } from 'react-icons/fa';
 import TitleSection from '../TitleSection';
 
@@ -12,9 +12,7 @@ export default function MatchesDay ({ matchesByDate }) {
     const matchesTdy = matchesByDate.filter(matches => {
       const formatDate = parseISO(matches.date);
       const currentDate = new Date();
-
-      if (getDay(formatDate) === currentDate.getDay() && getMonth(formatDate) === currentDate.getMonth()) return true
-      return false
+      return getDate(formatDate) === currentDate.getDate() && getMonth(formatDate) === currentDate.getMonth()
     })
 
     setMatchesDay(matchesTdy)
