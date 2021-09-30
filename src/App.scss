@@ -1,14 +1,14 @@
-.app-container {
+.app {
   width: 100%;
   padding: 10px;
 }
 
-.app-content {
+.app__content {
   width: 800px;
   margin: 0 auto;
 }
 
-.loading-container {
+.app__content__loadingContainer {
   width: 100%;
   height: 100vh;
   display: flex;
@@ -17,7 +17,7 @@
 }
 
 @media only screen and (max-width: 900px) {
-  .app-content {
+  .app__content {
     width: 95%;
   }
 }

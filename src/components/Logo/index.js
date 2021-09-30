@@ -1,10 +1,11 @@
-import React from 'react';
-import logo from '../../assets/img/champions_logo.png';
+import React from "react";
+import logo from "../../assets/img/champions_logo.png";
+import "./styles.scss";
 
-export default function Logo () {
+export default function Logo() {
   return (
-    <div style={{width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-      <img src={logo} alt='Champions-League-Logo' style={{width: '150px', height: '150px'}}/>
-    </div>
-  )
+    <section className="logo">
+      <img src={logo} alt="Champions-League-Logo" className="logo__image" />
+    </section>
+  );
 }
